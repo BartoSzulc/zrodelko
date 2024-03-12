@@ -93,12 +93,13 @@ $categories = get_the_terms($product->get_id(), 'product_cat');
                   <?php the_excerpt(); ?>
                 </div>
                 <div class="product__price">
+                  @php $fake_price = get_field('fake_price', $product->get_id()); @endphp
+                 
                   @if (get_field('fake_price', $product->get_id()))
-                  <div class="fake-price">
-                    @php $fake_price = get_field('fake_price', $product->get_id()); @endphp
-                  </div>
-                  @endif
                   {!! __( '<span>Cena:</span><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>'. $fake_price .'&nbsp;<span class="woocommerce-Price-currencySymbol">zł</span></bdi></span></del>', 'woocommerce' ) . ' ' . $product->get_price_html(); !!}
+                  @else
+                  {!! __( '<span>Cena:</span>', 'woocommerce' ) . ' ' . $product->get_price_html(); !!}
+                  @endif
                 </div>
                 @php 
                 do_action( 'woocommerce_single_product_summary' );

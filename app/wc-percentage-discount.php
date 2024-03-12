@@ -51,7 +51,21 @@ function ds_replace_sale_text($text)
     }
 }
 
- 
+
+add_action('woocommerce_before_shop_loop_item', 'display_fake_price_after_if_not_on_sale', 25);
+
+function display_fake_price_after_if_not_on_sale() {
+    global $product;
+    if ( !$product->is_on_sale() ) {
+        if(get_field('fake_price_after', $product->get_id())) {
+            echo '<div class="onsale"> -' . get_field('fake_price_after', $product->get_id()) . '%</div>';
+        }
+       
+    }
+}
+
+
+
 // add_filter('woocommerce_get_price_html', 'hide_regular_price', 10, 2);
 // function hide_regular_price($price, $product) {
 //     if ($product->is_on_sale()) {
