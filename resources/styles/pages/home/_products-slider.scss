@@ -1,0 +1,50 @@
+.home-products-slider__newest-and-bestsellers {
+    .container {
+        @apply relative overflow-hidden;
+        .tabs {
+            @apply relative overflow-hidden;
+            .tab-links {
+                @apply text-6xl font-bold gap-4 flex-wrap lg:py-60 py-30;
+                li {
+                    @apply md:min-w-[228px] cursor-pointer;
+                    
+                    a {
+                        @apply relative;
+                        &::before {
+                            content:"";
+                            transition: transform 1s cubic-bezier(.28,.75,.22,.95);
+                            transform: scale(0,1);
+                            transform-origin: right center;
+                            @apply w-full top-[calc(100%-2px)] left-0 absolute border-b border-primary;
+                        }
+                    }
+                    &:hover {
+                        a {
+                            @apply text-primary;
+                            &::before {
+                                transform: scale(1,1);
+                                transform-origin: left center;
+                            }
+                        }
+                    }
+                    &.active {
+                        a {
+                            @apply text-primary relative;
+                            &::before {
+                                transform: scale(1,1);
+                                transform-origin: left center;
+                            }
+                        }
+                    }
+                }
+            }
+            .tab-content .tab {
+                display: none;
+            }
+
+            .tab-content .tab.active {
+                display: block;
+            }
+        }
+    }
+}

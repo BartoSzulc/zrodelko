@@ -1,0 +1,5 @@
+<FilesMatch "admin-ajax\\.php|admin-post\\.php">
+    Order allow,deny
+    Allow from all
+    Satisfy any
+</FilesMatch>

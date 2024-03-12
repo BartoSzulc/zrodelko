@@ -1,0 +1,38 @@
+.bg-footer {
+    @apply  relative;
+    &::after {
+        content: "";
+        background-image: url(../../images/footer-bg.png);
+        @apply bg-black bg-cover bg-top bg-no-repeat absolute top-0 w-full h-full z-0 mix-blend-luminosity;
+    }
+    &__before-grid {
+        @apply relative;
+        &::after {
+            content: "";
+            @apply w-full h-px bg-white opacity-30 block top-0;
+        }
+    }
+    &__after-grid {
+        @apply relative;
+        &::after {
+            content: "";
+            @apply w-full h-px bg-white opacity-30 block top-0;
+        }
+    }
+    &__copyright--logo {
+        svg {
+            path {
+                @apply transition duration-500;
+                
+            }
+        }
+        &:not(:hover) {
+            path {
+               @apply fill-gray-dark;
+                
+            }
+        }
+            
+        }
+        
+    }

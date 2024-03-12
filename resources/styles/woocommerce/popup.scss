@@ -1,0 +1,54 @@
+.swal2-content {
+    @apply p-10 #{!important};
+    .panel {
+        @apply border-primary m-0 #{!important};
+        
+        &-heading {
+        @apply bg-primary text-5xl font-bold font-primary py-5 #{!important};
+        
+    }
+        &-body {
+            input[type="email"] {
+                @apply border border-solid rounded border-primary px-5 text-base;
+                @apply transition;
+                @apply appearance-none w-full focus:ring-0;
+                @apply text-black;
+                &::placeholder {
+                    @apply text-gray text-base;
+                }
+                &:focus {
+                    @apply border-primary transition outline-0;
+                }
+                &:hover:not(:focus) {
+                    @apply border-primary transition;
+                }
+            }
+            input[type="submit"] {
+                @apply bg-primary #{!important};
+                @extend .btn-primary;
+                @apply cursor-pointer;
+                &:hover {
+                    @apply bg-white border-primary text-primary #{!important};
+                }
+            }
+            .cwg_iagree_checkbox {
+                @apply text-base mb-5 #{!important};
+                a {
+                    @apply underline #{!important};
+                }
+                
+            }
+        }
+    }
+  
+}
+.cwg_popup_submit {
+    @extend .btn-primary;
+                @apply cursor-pointer mb-6;
+                &:hover {
+                    @apply bg-white border-primary text-primary #{!important};
+                }
+}
+.cwgstock_output {
+    @apply text-base #{!important};
+}

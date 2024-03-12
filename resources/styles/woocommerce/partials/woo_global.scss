@@ -1,0 +1,8 @@
+.woocommerce-ResetPassword.lost_reset_password {
+    @apply col-span-full;
+}
+.woocommerce-lost-password {
+    .woocommerce {
+        @apply block #{!important};
+    }
+}

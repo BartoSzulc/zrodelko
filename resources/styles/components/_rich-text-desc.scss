@@ -1,0 +1,6 @@
+.rich-text-desc {
+    @apply text-lg font-medium leading-7 text-gray-500;
+    ol {
+        @apply list-decimal list-inside;
+    }
+}

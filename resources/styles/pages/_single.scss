@@ -1,0 +1,32 @@
+
+.woocommerce-page section .single {
+    @apply py-0;
+}
+body:not(.woocommerce-page) {
+    section > .single {
+        @apply py-10;
+        h1 {
+            @apply text-7xl font-bold lg:mb-60 mb-30;
+        }
+        
+        h2, h3, h4, h5 {
+            @apply text-6xl font-bold lg:mb-8 mb-5;
+        }
+        
+        h2 {
+            @apply font-headings;
+        }
+        
+        ul {
+            @apply list-disc list-inside;
+        }
+        
+        ol {
+            @apply list-decimal list-inside;
+        }
+        
+        p, li {
+            @apply mb-4;
+        }
+    }
+}

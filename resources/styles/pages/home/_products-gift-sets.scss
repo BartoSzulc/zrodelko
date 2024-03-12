@@ -1,0 +1,22 @@
+.home-products-gift-sets {
+    .products {
+        .product {
+            @extend .productCustom;
+            @apply px-0 pt-0 border-gray-light #{!important};
+            &:hover {
+                @apply shadow-2xl bottom-2.5 #{!important};
+            }
+            a img {
+                max-height: 380px;
+                min-height: 380px;
+                object-fit: contain;
+                
+                @apply mx-auto w-full aspect-[472/380] mb-10 #{!important};
+            }
+            .woocommerce-loop-product__title,
+            .price {
+                @apply px-30;
+            }
+        }
+    }
+}

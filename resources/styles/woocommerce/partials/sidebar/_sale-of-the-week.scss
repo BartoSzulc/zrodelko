@@ -1,0 +1,5 @@
+.sale-of-the-week {
+    li.product {
+        @extend .productCustom;
+    }
+}

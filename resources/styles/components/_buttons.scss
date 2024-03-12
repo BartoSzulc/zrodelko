@@ -1,0 +1,14 @@
+.btn-primary {
+    @apply bg-primary border-primary border border-solid rounded text-white font-button text-button;
+    @apply transition duration-500 xl:min-w-[228px] min-w-[200px] h-60 inline-flex items-center justify-center;
+    &:hover {
+        @apply bg-white border-primary text-primary;
+    }
+}
+.btn-secondary {
+    @apply bg-white border-primary border border-solid rounded text-primary font-button text-button;
+    @apply transition duration-500 xl:min-w-[228px] min-w-[200px] h-60 inline-flex items-center justify-center;
+    &:hover {
+        @apply bg-primary text-white;
+    }
+}

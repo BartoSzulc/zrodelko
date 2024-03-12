@@ -1,0 +1,9 @@
+@extends('layouts.app')
+@section('content')
+@include('sections.home.home-hero')
+@include('sections.home.home-products-slider')
+@include('sections.home.home-promo-products')
+@include('partials.newsletter')
+@include('sections.home.home-gift-sets')
+@include('sections.home.home-seo-section')
+@endsection

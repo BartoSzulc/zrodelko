@@ -1,0 +1,22 @@
+// Colors 
+$primary200: theme('colors.primary.DEFAULT');
+$primary400: theme('colors.primary.DEFAULT');
+$primary600: theme('colors.primary.DEFAULT');
+$gray200: theme('colors.gray-light.DEFAULT');
+$gray400: theme('colors.gray-dark.DEFAULT');
+$gray600: theme('colors.gray.DEFAULT');
+$text200: #636160;
+$text400: #1D1D1B;
+$text600: #000000;
+$warning400: #F9971E;
+$success400: #28A138;
+$danger400: #D21C1C;
+$info400: #0172CB;
+$font-primary: 'Montserrat', sans-serif;
+
+// Responsive
+$desktop: 1920px;
+$notebook: 1680px;
+$tablet: 1024px;
+$small_tablet: 768px;
+$mobile: 576px;

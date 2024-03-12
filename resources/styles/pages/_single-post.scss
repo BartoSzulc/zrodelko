@@ -1,0 +1,29 @@
+.content.wysiwyg {
+    h1 {
+        @apply text-7xl font-bold;
+    }
+    h2 {
+        @apply text-6xl font-bold
+    }
+    h3 {
+        @apply text-5xl font-bold;
+    }
+    a {
+        @apply transition-all duration-500 ease-in-out hover:text-primary underline; 
+    }
+    strong { 
+        @apply font-bold text-primary;
+    }
+    ul {
+        @apply list-inside list-disc;
+        li {
+            @apply text-base;
+        }
+    }
+    ol {
+        @apply list-inside list-decimal;
+        li {
+            @apply text-base;
+        }
+    }
+}

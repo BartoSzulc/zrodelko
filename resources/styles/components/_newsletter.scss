@@ -1,0 +1,13 @@
+.newsletter {
+    &-main {
+        box-shadow: $shadow-1; 
+    }
+    &-inside {
+        background: linear-gradient(90deg, #FFFFFF 40.53%, rgba(255, 255, 255, 0) 100%);
+        box-shadow: $shadow-1;
+       
+    }
+    .wpcf7 {
+        @apply w-full;
+    }
+} 

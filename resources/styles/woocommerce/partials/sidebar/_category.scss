@@ -1,0 +1,42 @@
+// .archive {
+//     &:not(.zestawy-upominkowe) {
+//         li:has( > #bapf_1_51) {
+//             @apply hidden;
+//         }
+//     }
+    
+// }
+
+.berocket_single_filter_widget_504 {
+    ul {
+        @apply space-y-5 #{!important};
+        
+    }
+    .bapf_tax_product_cat {
+        i {
+            @apply transition;
+        }
+        @apply flex flex-wrap items-center justify-between transition-colors duration-500 text-desc;
+        > label {
+            @apply transition-colors duration-500 pl-0 #{!important};
+            &:hover {
+                @apply text-primary;
+            }
+        }
+        > ul {
+            @apply w-full text-base mt-5 space-y-5 #{!important};
+            .bapf_tax_product_cat {
+                @apply flex flex-wrap items-center justify-between transition-colors duration-500 text-base;
+            }
+
+        }
+        input {
+            @apply hidden #{!important};
+        }
+        &.checked {
+           > label {
+            @apply font-semibold text-primary;
+           }
+        }
+    }
+}

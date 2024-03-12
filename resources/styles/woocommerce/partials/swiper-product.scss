@@ -1,0 +1,22 @@
+.simple-product {
+    .swiper-wrapper {
+        @apply gap-y-4;
+    }
+    .swiper-slide {
+        li.product {
+            @extend .productCustom;
+        }
+    }
+}
+.swiperPromo {
+    &.simple-product {
+        .swiper-slide {
+            li.product {
+                @apply border-gray-light #{!important};
+                &:hover {
+                    @apply shadow-2xl bottom-2.5 #{!important};
+                }
+            }
+        }
+    }
+}

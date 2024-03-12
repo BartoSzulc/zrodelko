@@ -1,0 +1,41 @@
+name: 🚀 Deploy CI theme on Develop Server
+
+on:
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  web-deploy:
+    name: 🎉 Build Project and Send to FTPk
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - name: 🚧 Build Project
+        run: |
+          yarn
+          npm run build
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: c5083.lh.pl
+          username: ${{ secrets.DEV_USER }}
+          password: ${{ secrets.DEV_PASS }}
+          server-dir: ${{ secrets.DEV_PATH }}
+          protocol: ftps
+          port: 21
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.idea/**
+            **/.budfiles/**
+            **/.idea/**

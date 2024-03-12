@@ -1,0 +1,165 @@
+/*
+* 
+* variables to apply - override CF7 style
+*
+* Useful CF7 classes:
+* .wpcf7 the wrapper element
+* .wpcf7-form
+* .wpcf7-form-control
+* .wpcf7-text
+* .wpcf7-email
+* .wpcf7-textarea
+* .wpcf7-submit
+*/
+
+.wpcf7 {
+    // all inputs except radios and checkboxes inherit from form-control
+    input[type="text"],
+    input[type="search"],
+    input[type="url"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="range"],
+    input[type="date"],
+    input[type="month"],
+    input[type="week"],
+    input[type="time"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="color"],
+    input[type="email"],
+    input[type="file"],
+    input[type="submit"],
+    select,
+    textarea {
+        @apply border border-solid rounded border-primary pt-[37px] pb-[17px] px-5 text-base;
+        @apply transition;
+        @apply appearance-none w-full focus:ring-0;
+        @apply text-black;
+        &::placeholder {
+            @apply text-gray text-base;
+        }
+        &:focus {
+            @apply border-primary transition outline-0;
+        }
+        &:hover:not(:focus) {
+            @apply border-primary transition;
+        }
+    }
+    input[type="checkbox"] {
+        display: none;
+    }
+    // textarea {
+    //     @apply mb-0 resize-none;
+    // }
+
+    // not valid tip for each control
+    .wpcf7-not-valid-tip {
+        @apply mt-1 absolute text-smallest;
+    }
+    .wpcf7-response-output {
+        @apply mt-14 border-primary rounded border w-fit mx-auto bg-white transition-all text-base #{!important};
+    }
+    // validation errors ourput bottom of form
+    .wpcf7-validation-errors {
+        @apply mt-14 border-red-900 rounded border w-fit mx-auto bg-white transition-all text-base #{!important};
+
+    }
+    .wpcf7-list-item {
+        @apply ml-0 #{!important};
+        label {
+            @apply block;
+            .wpcf7-list-item-label {
+                @apply relative  #{!important};
+                @apply flex items-center;
+                
+            }
+        }
+    }
+    .wpcf7-acceptance {
+         @apply relative  #{!important};
+        label span:before {
+            @apply  flex items-center justify-center transition;
+            @apply h-[30px] w-[30px];
+            @apply shrink-0;
+            @apply relative;
+            @apply mr-2.5;
+            content: "";
+            background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='30' height='30' rx='15' fill='white'/%3E%3C/svg%3E%0A");
+            @apply bg-no-repeat bg-center;
+            
+        }
+        .wpcf7-list-item-label {
+            @apply cursor-pointer;
+        }
+    }
+    .wpcf7-acceptance label > input:checked + span:before {
+        background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='30' height='30' rx='15' fill='white'/%3E%3Crect x='7' y='7' width='16' height='16' rx='8' fill='%23605F5F'/%3E%3C/svg%3E%0A");
+    }
+
+    .btn {
+        @apply block w-full md:w-auto mx-auto lg:mx-0;
+    }
+}
+
+
+
+.formWrap {
+    .text-polityka {
+        @apply mt-4 lg:bg-white/70 lg:p-2 lg:rounded lg:border lg:border-solid lg:border-gray;
+    }
+    .wpcf7-acceptance {
+        @apply relative  #{!important};
+       label span:before {
+           @apply flex items-center justify-center transition border border-primary rounded-full;
+           @apply h-[30px] w-[30px];
+           @apply shrink-0;
+           @apply relative;
+           @apply mr-2.5;
+           content: "";
+           background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='30' height='30' rx='15' fill='white'/%3E%3C/svg%3E%0A");
+           @apply bg-no-repeat bg-center;
+           
+       }
+       .wpcf7-list-item-label {
+           @apply cursor-pointer;
+       }
+   }
+}
+.formNewsletter {
+    .wpcf7-not-valid-tip {
+        @apply mt-0 absolute -top-5 text-smallest;
+    }
+
+    @apply relative;
+    .form-group {
+        @apply relative flex w-full;
+        .wpcf7-form-control-wrap {
+            @apply flex-1;
+        }
+        input {
+            @apply border-gray w-full;
+        }
+        label {
+            @apply absolute top-1/2 -translate-y-1/2 left-5 text-base text-gray transition-all;
+            &.focused {
+                @apply top-5 text-smallest opacity-50 left-[21px];  
+            }
+        }
+        &-btn {
+            @apply flex items-center justify-center mt-4 sm:mt-0;
+            @apply sm:absolute sm:right-2.5 sm:top-1/2 sm:-translate-y-1/2;
+            .btn-primary {
+                @apply min-w-full sm:min-w-fit py-2.5 px-7;
+            }
+        }
+    }
+    .wpcf7-response-output {
+        @apply text-black text-center #{!important};
+    }
+    // validation errors ourput bottom of form
+    .wpcf7-validation-errors {
+        @apply text-black text-center #{!important};
+
+    }
+}

@@ -1,0 +1,29 @@
+.promo-product {
+    @apply xl:col-span-3 col-span-4;
+    .sale-countdown {
+        @apply lg:mt-60 mt-30 mb-[14px] lg:mb-0;
+        #countdown {
+            @apply justify-center;
+        }
+    }
+    &__inside {
+        li.product {
+            @extend .productCustom;
+            .onsale {
+                @apply bg-black #{!important};
+            }
+           
+        }   
+    }
+}
+.sale-of-the-week {
+    .product {
+        .onsale {
+            @apply bg-black #{!important};
+        }
+        .price {
+            @apply text-primary block  #{!important};
+            
+        }
+    }
+}

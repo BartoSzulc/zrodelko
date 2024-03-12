@@ -1,0 +1,37 @@
+.bapf_slidr {
+    @apply pb-30;
+}
+.bapf_slidr_all {
+    @apply -top-[15px] relative;
+}
+.irs {
+    @apply font-primary cursor-pointer;
+}
+.irs--flat .irs-line {
+    @apply h-1.5;
+}
+.irs-single {
+    @apply top-14 #{!important};
+}
+.irs-bar {
+    @apply hidden;
+}
+.irs-to, .irs-from {
+    @apply top-14 cursor-pointer #{!important} ;
+}
+.irs--flat .irs-from, .irs--flat .irs-single, .irs--flat .irs-to {
+    &::before {
+        @apply hidden;
+    }
+    @apply text-base text-black bg-transparent rounded-none p-0 #{!important};
+}
+.irs--flat .irs-handle {
+    @apply top-[15px] w-30 h-30;
+}
+.irs--flat .irs-handle>i:first-child {
+    @apply absolute bg-transparent w-30 h-30 m-0 block top-0 left-0 cursor-pointer;
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='29' height='29' rx='14.5' fill='white' stroke='%23ACACAC'/%3E%3Crect x='7' y='7' width='16' height='16' rx='8' fill='%23B13126'/%3E%3C/svg%3E");
+}
+.irs--flat .irs-handle.state_hover>i:first-child, .irs--flat .irs-handle:hover>i:first-child {
+    @apply bg-transparent;
+}

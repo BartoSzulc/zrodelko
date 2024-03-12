@@ -1,0 +1,30 @@
+.home-promo-products {
+    [class*='promo-of-the-week__'] {
+        @apply overflow-hidden lg:grid lg:gap-x-4;
+        
+    }
+    .promo-of-the-week {
+        &__yes {
+            @apply lg:grid-cols-8;
+
+            .swiperPromo {
+                @apply col-span-6 col-start-2 overflow-hidden relative z-10;
+            }
+
+        }
+
+        &__no {
+            @apply grid-cols-12;
+            .background-white {
+                @apply left-0;
+            }
+            .swiperPromo {
+                @apply col-span-full overflow-hidden relative z-10;
+                h2 {
+                    @apply text-center;
+                }
+            }
+        }
+        
+    }
+}

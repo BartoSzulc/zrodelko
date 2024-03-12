@@ -1,0 +1,32 @@
+.bapf_head {
+    @apply text-5xl font-semibold mb-5;
+}
+.berocket_single_filter_widget:not(:last-child) {
+    @apply mb-30;
+}
+.bapf_sfilter {
+    @apply mb-0;
+}
+#category_filter {
+    @apply bg-white lg:px-30 px-5 border border-gray-light relative lg:py-30 py-5;
+    &::before {
+        content: "";
+        @apply w-full h-1 bg-primary block mb-5 absolute left-0 top-0;
+    }
+    .fa-plus:before {
+        content: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.7359 0.267679C11.5667 0.0962844 11.3373 -2.89694e-08 11.098 -3.9426e-08C10.8588 -4.98826e-08 10.6294 0.0962844 10.4602 0.267679L5.99455 4.7932L1.52889 0.267679C1.35874 0.101141 1.13086 0.00898998 0.894314 0.011073C0.657772 0.013156 0.4315 0.109307 0.264234 0.278816C0.096967 0.448324 0.00208949 0.677629 3.3997e-05 0.917342C-0.0020215 1.15705 0.0889105 1.388 0.253245 1.56042L5.35673 6.73232C5.52591 6.90372 5.75533 7 5.99455 7C6.23377 7 6.4632 6.90372 6.63238 6.73232L11.7359 1.56042C11.905 1.38898 12 1.15648 12 0.914052C12 0.671626 11.905 0.439126 11.7359 0.267679Z' fill='%232B2B2A'/%3E%3C/svg%3E%0A");
+    }
+    .fa-minus:before {
+        content: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.264138 6.73232C0.433317 6.90372 0.662742 7 0.901961 7C1.14118 7 1.37061 6.90372 1.53978 6.73232L6.00545 2.2068L10.4711 6.73232C10.6413 6.89886 10.8691 6.99101 11.1057 6.98893C11.3422 6.98684 11.5685 6.89069 11.7358 6.72118C11.903 6.55168 11.9979 6.32237 12 6.08266C12.002 5.84295 11.9111 5.612 11.7468 5.43958L6.64327 0.267678C6.47409 0.0962829 6.24467 -1.83288e-06 6.00545 -1.83573e-06C5.76623 -1.83859e-06 5.5368 0.0962829 5.36762 0.267678L0.264139 5.43958C0.0950107 5.61102 1.37909e-08 5.84352 1.09e-08 6.08595C8.00906e-09 6.32837 0.0950107 6.56087 0.264138 6.73232Z' fill='%23B13126'/%3E%3C/svg%3E%0A");
+    }
+    
+}
+
+//price filter
+@import "sidebar/price-filter";
+//category 
+@import "sidebar/category";
+//attribute
+@import "sidebar/attributes";
+//sale-of-the-week
+@import "sidebar/sale-of-the-week";

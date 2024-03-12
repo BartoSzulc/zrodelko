@@ -1,0 +1,65 @@
+.woocommerce-order {
+    @apply lg:p-30 py-5 text-black bg-white border-t-primary border-t-4 #{!important};
+    .woocommerce-notice {
+        @apply text-5xl font-bold mb-5;
+    }
+    ul.order_details {
+        @apply block space-y-4 mb-5 #{!important};
+        &:before {
+            @apply hidden;
+        }
+        li {
+            @apply w-full border-r-0 flex space-x-3 text-base items-center normal-case #{!important};
+            strong {
+                @apply ml-3 text-base #{!important};
+            }
+
+        }
+    }
+    .woocommerce-order-details {
+        @apply bg-black text-white text-base p-5 mb-0 #{!important};
+        .woocommerce-order-details__title {
+            @apply text-5xl font-bold mb-5 #{!important};   
+        }
+        .woocommerce-table--order-details {
+            thead {
+                @apply m-0 border-b border-b-gray #{!important};
+                tr {
+                    @apply pb-5;
+                    th {
+                        @apply col-span-full lg:col-span-4 p-0 border-none text-desc text-white #{!important};
+                        &.woocommerce-table__product-table.product-total {
+                            @apply lg:block hidden;
+                        }
+                    }
+                }
+            }
+            tbody {
+                @apply m-0 border-b py-5 border-b-gray #{!important};
+                tr {
+                    &:not(:last-child) {
+                        @apply mb-5;
+                    }
+                    td {
+                        @apply col-span-full lg:col-span-4 p-0 border-none  #{!important};
+                        &.woocommerce-table__product-name.product-name {
+                            @apply text-base font-bold;
+                        }
+                    }
+                }
+            }
+            tfoot {
+                @apply w-full grid m-0 py-5 border-b border-b-gray space-y-3.5 #{!important};
+                tr {
+                    @apply inline-block lg:grid lg:grid-cols-12 gap-4 #{!important};
+                    td {
+                        @apply col-span-full lg:col-span-4 p-0 border-none  #{!important};
+                        &.woocommerce-table__product-name.product-name {
+                            @apply text-base font-bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

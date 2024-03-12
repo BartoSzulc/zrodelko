@@ -1,0 +1,168 @@
+.current {
+  @apply text-primary;
+}
+
+a {
+  transition: all 0.5s;
+}
+.link-hover {
+  @apply transition-opacity;
+  &:hover {
+    @apply opacity-70;
+  }
+}
+.underline-custom {
+  a {
+  position: relative;
+    &::before {
+      content:"";
+      transition: transform 1s cubic-bezier(.28,.75,.22,.95);
+      transform: scale(0,1);
+      transform-origin: right center;
+      @apply w-full top-[calc(100%-2px)] left-0 absolute border-b border-gray-light;
+    }
+    &:hover::before{
+      transform: scale(1,1);
+      transform-origin: left center;
+    }
+   
+  }
+  &__primary {
+    a {
+      position: relative;
+      &::before {
+        content:"";
+        transition: transform 1s cubic-bezier(.28,.75,.22,.95);
+        transform: scale(0,1);
+        transform-origin: right center;
+        @apply w-full top-[calc(100%-2px)] left-0 absolute border-b border-primary;
+      }
+      &:hover::before{
+        transform: scale(1,1);
+        transform-origin: left center;
+      }
+    }
+  }
+  &--active {
+    a {
+      position: relative;
+        &::before {
+          content:"";
+          transition: transform 1s cubic-bezier(.28,.75,.22,.95);
+          transform: scale(1,1);
+          transform-origin: right center;
+          @apply w-full top-[calc(100%-2px)] left-0 absolute border-b border-gray-light;
+        }
+        &:hover::before{
+          @apply border-primary;
+        }
+       
+      }
+  }
+}
+
+body {
+  @apply font-primary text-base text-black bg-gray-light;
+}
+
+// body :where(h1, h2, h3, h4, h5, h6) {
+//   @apply font-headings font-semibold;
+// }
+
+// h1,
+// :where(h1),
+// .h1 {
+//   @apply fluid-text-delta xs:fluid-text-alpha;
+// }
+
+// h2,
+// :where(h2),
+// .h2 {
+//   @apply fluid-text-delta xs:fluid-text-beta;
+// }
+
+// h3,
+// :where(h3),
+// .h3 {
+//   @apply fluid-text-epsilon xs:fluid-text-gamma;
+// }
+
+// h4,
+// :where(h4),
+// .h4 {
+//   @apply fluid-text-zeta xs:fluid-text-delta;
+// }
+
+// h5,
+// :where(h5),
+// .h5 {
+//   @apply fluid-text-base xs:fluid-text-epsilon;
+// }
+
+// h6,
+// :where(h6),
+// .h6 {
+//   @apply fluid-text-base xs:fluid-text-zeta;
+// }
+
+// small,
+// :where(small) {
+//   @apply fluid-text-sm;
+// }
+
+// pre,
+// a,
+// p,
+// span {
+//   @apply whitespace-normal break-words;
+// }
+
+.wysiwyg > * + * {
+  @apply lg:mt-30 mt-4;
+}
+
+[class*="fluid-text"] > h1,
+[class*="fluid-text"] > h2,
+[class*="fluid-text"] > h3,
+[class*="fluid-text"] > h4,
+[class*="fluid-text"] > h5,
+[class*="fluid-text"] > h6 {
+  @apply font-size-inherit color-inherit;
+}
+
+img {
+  @apply max-w-full;
+}
+input,
+textarea,
+select {
+  @apply transition;
+  &:focus:not(:focus-visible) {
+    @apply focus:ring-primary;
+  }
+}
+ul {
+  @apply list-disc list-inside leading-10;
+  li::marker {
+    margin-left: 20px !important;
+  }
+}
+.gradient-footer {
+  background: linear-gradient(180deg, #2B2B2A 0%, rgba(43, 43, 42, 0) 100%);
+}
+.modalFooter {
+  a {
+    @apply relative transition-colors;
+    &:before {
+      @apply border-b-black;
+      transform: scale(1,1);
+    }
+    &:hover {
+      @apply text-primary;
+      &:before {
+        @apply border-b-primary;
+      }
+    }
+    
+  }
+}

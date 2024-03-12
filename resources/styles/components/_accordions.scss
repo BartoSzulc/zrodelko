@@ -1,0 +1,66 @@
+.accordions .panel{
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.accordion.is-open + .panel{
+    visibility: visible;
+    
+}
+
+.faq-2 {
+    .accordions {
+        .main {
+            &.is-open { 
+                @apply text-gray-400;
+                @apply border-gray-200;
+            }
+        }
+        .ml-auto {
+            svg {
+                @apply transition-transform;
+                path {
+                    @apply transition-colors;
+                }
+            }
+        }
+        .inside {
+            @apply cursor-pointer;
+            &.is-open { 
+                + .ml-auto {
+                    svg {
+                        @apply transform rotate-180;
+                    }
+                }
+                .panel {
+                    @apply mt-4;
+                }
+            }
+        }
+    }
+}
+
+.faq-3 {
+    .accordions {       
+        .ml-auto {
+            svg {
+                @apply transition-transform;
+            }
+        }
+        .inside {
+            @apply cursor-pointer;
+            &.is-open { 
+                + .ml-auto {
+                    svg {
+                        @apply transform rotate-180;
+                    }
+                }
+                .panel {
+                    @apply mt-4;
+                }
+            }
+        }
+    }
+}

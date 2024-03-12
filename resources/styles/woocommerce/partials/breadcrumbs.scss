@@ -1,0 +1,14 @@
+.woocommerce-breadcrumb {
+    @apply text-primary font-bold mb-0 overflow-x-auto whitespace-nowrap #{!important};
+    a {
+        @extend .link-hover;
+        position: relative;
+        @apply text-black #{!important};
+      
+        &::before {
+          content:"";
+          @apply w-full h-px -bottom-px left-0 absolute bg-black;
+          @apply transition-[width] duration-500;
+        }
+    }
+}

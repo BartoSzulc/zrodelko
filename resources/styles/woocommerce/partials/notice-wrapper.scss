@@ -1,0 +1,111 @@
+.woocommerce-notices-wrapper {
+    @apply m-0 col-span-full;
+    .woocommerce-error {
+        @apply bg-white flex items-center px-5 py-[23px] border-none relative text-base;
+        &::after {
+            content: "";
+            @apply absolute top-0 w-full h-1 bg-primary left-0;
+        }
+        &:before {
+            @apply w-30 h-30 relative top-0 left-0 bg-primary rounded-full flex items-center justify-center mr-5;
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z'%3E%3C/path%3E%3C/svg%3E");
+        }
+    }
+}
+.woocommerce-notices-wrapper {
+    .woocommerce-message {
+        @apply bg-white flex items-center px-5 py-[23px] border-none relative text-base;
+        &::after {
+            content: "";
+            @apply absolute top-0 w-full h-1 bg-primary left-0;
+        }
+        &:before {
+            @apply w-30 h-30 relative top-0 left-0 bg-primary rounded-full flex items-center justify-center mr-5;
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z'%3E%3C/path%3E%3C/svg%3E");
+        }
+        a.restore-item {
+            @apply ml-1;
+            span {
+                @apply relative text-primary;
+                @extend .link-hover;
+                &::before {
+                    content: "";
+                    @apply w-full h-px -bottom-px left-0 absolute bg-primary;
+                    @apply transition-[width] duration-500;
+                }
+            }
+        }
+    }
+    
+}
+.woocommerce-no-products-found {
+    .woocommerce-info {
+        @apply bg-white flex items-center px-5 py-[23px] border-none relative text-base;
+        &::after {
+            content: "";
+            @apply absolute top-0 w-full h-1 bg-primary left-0;
+        }
+        &:before {
+            @apply w-30 h-30 relative top-0 left-0 bg-primary rounded-full flex items-center justify-center mr-5;
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z'%3E%3C/path%3E%3C/svg%3E");
+        }
+
+    }
+}
+.woocommerce-form-login-toggle {
+    @apply mb-30 bg-white relative px-5 py-[23px];
+    &::before {
+      content: "";
+      @apply absolute top-0 w-full h-1 bg-primary left-0;
+    }
+    .woocommerce-info {
+      border-top: 0;
+      background-color: transparent;
+      @apply flex items-center mb-0 p-0;
+      .login-text {
+        @apply inline-block ml-5;
+      }
+      &::before {
+        content: "";
+        background-image: url("data:image/svg+xml,%3Csvg width='28' height='30' viewBox='0 0 28 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 16.8975C4.97202 16.8975 0 21.1617 0 28.9048C0 29.5095 0.490905 29.9997 1.0966 29.9997H26.9034C27.5091 29.9997 28 29.5095 28 28.9048C28.0001 21.1621 23.028 16.8975 14 16.8975ZM2.2331 27.8099C2.66444 22.0205 6.61768 19.0873 14 19.0873C21.3824 19.0873 25.3357 22.0205 25.7674 27.8099H2.2331Z' fill='%23B13126'/%3E%3Cpath d='M13.9851 0C9.83806 0 6.71094 3.18504 6.71094 7.40842C6.71094 11.7555 9.97409 15.2916 13.9851 15.2916C17.9961 15.2916 21.2592 11.7555 21.2592 7.40877C21.2592 3.18504 18.1321 0 13.9851 0ZM13.9851 13.1022C11.1832 13.1022 8.90414 10.5482 8.90414 7.40877C8.90414 4.38469 11.0411 2.18977 13.9851 2.18977C16.882 2.18977 19.066 4.4332 19.066 7.40877C19.066 10.5482 16.7869 13.1022 13.9851 13.1022Z' fill='%23B13126'/%3E%3C/svg%3E%0A");
+        width: 28px;
+        height: 30px;
+        display: inline-block;
+        @apply relative top-0 left-0;
+      
+      }
+    }
+    a {
+      text-transform: lowercase;
+      span {
+        @apply relative text-primary;
+        @extend .link-hover;
+        &::before {
+          content:"";
+          @apply w-full h-px -bottom-px left-0 absolute bg-primary;
+          @apply transition-[width] duration-500;
+        }
+      }
+    }
+  }
+
+.woocommerce-message.woocommerce-Message--info {
+    &.woocommerce-info {
+        @apply bg-white flex items-center px-5 py-[23px] border-none relative text-base;
+        &::after {
+            content: "";
+            @apply absolute top-0 w-full h-1 bg-primary left-0;
+        }
+        &:before {
+            @apply w-30 h-30 relative top-0 left-0 bg-primary rounded-full flex items-center justify-center mr-5;
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z'%3E%3C/path%3E%3C/svg%3E");
+        }
+        .button {
+            @apply hidden #{!important};
+        }
+    }
+
+}
+
+//orders 
+
