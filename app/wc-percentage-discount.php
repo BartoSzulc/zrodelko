@@ -51,7 +51,7 @@ function ds_replace_sale_text($text)
     }
 }
 
-
+ 
 // add_filter('woocommerce_get_price_html', 'hide_regular_price', 10, 2);
 // function hide_regular_price($price, $product) {
 //     if ($product->is_on_sale()) {

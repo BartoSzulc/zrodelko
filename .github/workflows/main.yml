@@ -26,7 +26,7 @@ jobs:
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: zstw.ftp.dhosting.pl
+          server: c5189.lh.pl
           username: ${{ secrets.PROD_USER }}
           password: ${{ secrets.PROD_PASS }}
           server-dir: ${{ secrets.PROD_PATH }}
