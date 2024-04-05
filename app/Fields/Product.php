@@ -22,7 +22,7 @@ class Product extends Field
         ->addTab('promo_label', ['label' => 'Dodaj etykiete'])
             ->addTrueFalse('truefalse_checkbox_select', ['label' => 'Wyswietl etykiete',])
             ->addSelect('checkbox_select', ['label' => 'Wybierz opcje', 'choices' => ['good_price' => 'Dobra cena', 'limit' => 'Limitowana edycja'], 'return_format' => 'label',])
-        ->addTab('promo_fake', ['label' => 'Ustaw "sztuczną" promocję'])
+        ->addTab('promo_fake', ['label' => 'Ustaw "sztuczną" promocje'])
             ->addText('fake_price', ['label' => 'Cena przed promocją', 'instructions' => 'np. 40,00', 'wrapper' => ['width' => '50%']])
             ->addText('fake_price_after', ['label' => '% promocji', 'instructions' => 'np. 4', 'wrapper' => ['width' => '50%']])
         ->addTab('is_promo_tab', ['label' => 'Promocja tygodnia'])

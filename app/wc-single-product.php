@@ -88,6 +88,9 @@ function woo_display_product_description() {
       }
       echo '</div>
       </div>';
+      if (function_exists('woocommerce_output_related_products')) {
+        woocommerce_output_related_products();
+      } 
   }
 }
 
