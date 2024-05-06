@@ -6,4 +6,5 @@
 @include('partials.newsletter')
 @include('sections.home.home-gift-sets')
 @include('sections.home.home-seo-section')
+@include('sections.home.home-blog')
 @endsection

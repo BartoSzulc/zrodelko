@@ -230,7 +230,7 @@ export default class Carousels extends Component {
                             slidesPerView: 2,
                             spaceBetween: 16,
                         },
-                        1280: {
+                        1440: {
                             slidesPerView: 3,
                             spaceBetween: 16,
                         },

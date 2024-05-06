@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 @endphp
 @if ($related_products)
-	<section class="related-products lg:py-60 bg-white lg:mt-60 mt-30 py-30">
+	<section class="related-products bg-white">
 		<div class="container">
 			<div class="block lg:grid grid-cols-12 gap-4">
 
